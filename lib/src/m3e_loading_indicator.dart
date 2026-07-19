@@ -17,7 +17,7 @@ import 'package:flutter_m3shapes_extended/flutter_m3shapes_extended.dart';
 
 /// A Material Design loading indicator.
 ///
-/// This version of the loading indicator morphs between its [polygons] shapes.
+/// This version of the loading indicator morphs between its [shapes] list.
 /// ![Loading indicator image](https://developer.android.com/images/reference/androidx/compose/material3/loading-indicator.png)
 class M3ELoadingIndicator extends ProgressIndicator {
   /// A list of [Shapes] for the sequence of shapes this loading indicator
@@ -28,6 +28,7 @@ class M3ELoadingIndicator extends ProgressIndicator {
   /// If null, then the [ProgressIndicatorThemeData.constraints] will be used. Otherwise, defaults to a minimum width and height of 48 pixels.
   final BoxConstraints? constraints;
 
+  /// Creates an [M3ELoadingIndicator] that morphs between geometric shapes.
   const M3ELoadingIndicator({
     super.key,
     super.color,

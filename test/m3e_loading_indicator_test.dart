@@ -10,11 +10,7 @@ import 'package:m3e_loading_indicator/m3e_loading_indicator.dart';
 void main() {
   testWidgets('M3ELoadingIndicator can be built', (WidgetTester tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: Scaffold(
-          body: M3ELoadingIndicator(),
-        ),
-      ),
+      const MaterialApp(home: Scaffold(body: M3ELoadingIndicator())),
     );
 
     expect(find.byType(M3ELoadingIndicator), findsOneWidget);

@@ -1,8 +1,8 @@
 name: m3e_loading_indicator
-description: "A new Flutter package project."
+description: A Flutter package providing Material 3 Expressive (M3E) shape morphing loading indicators with vector path interpolation.
 version: 0.0.1
-publish_to: 'none'
-homepage:
+homepage: https://github.com/Mudit200408/m3e_loading_indicator
+repository: https://github.com/Mudit200408/m3e_loading_indicator
 
 environment:
   sdk: ^3.12.1
@@ -11,8 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_m3shapes_extended:
-    path: ../flutter_m3shapes_extended
+  flutter_m3shapes_extended: ^1.2.0
 
 dev_dependencies:
   flutter_test:

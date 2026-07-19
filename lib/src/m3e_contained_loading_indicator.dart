@@ -44,6 +44,7 @@ class M3EContainedLoadingIndicator extends StatelessWidget {
   /// Semantic value for accessibility.
   final String? semanticsValue;
 
+  /// Creates an [M3EContainedLoadingIndicator] that is enclosed in a styled container.
   const M3EContainedLoadingIndicator({
     super.key,
     this.shapes,
