@@ -3,7 +3,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:m3e_loading_indicator/m3e_loading_indicator.dart';
 
@@ -107,5 +107,23 @@ void main() {
     final lerped = M3EPullToRefreshStyle.lerp(style1, style2, 0.5);
     expect(lerped, isNotNull);
     expect(lerped!.elevation, 3.0);
+  });
+
+  testWidgets('M3EPullToRefreshIndicator builds cleanly with elevation', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: M3EPullToRefreshIndicator(
+            style: const M3EPullToRefreshStyle(elevation: 4.0),
+            onRefresh: () async {},
+            child: ListView(children: const [Text('Item 1')]),
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text('Item 1'), findsOneWidget);
   });
 }

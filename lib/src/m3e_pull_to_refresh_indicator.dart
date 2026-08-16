@@ -1,5 +1,5 @@
 import 'dart:math' as math;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:m3e_loading_indicator/m3e_loading_indicator.dart';
 import 'package:motor/motor.dart';
 
@@ -413,10 +413,12 @@ class _M3EPullToRefreshIndicatorState extends State<M3EPullToRefreshIndicator>
 
     Widget containerWidget = headerChild;
     if (style?.elevation != null && style!.elevation! > 0) {
+      final effectiveRadius =
+          style.borderRadius ?? BorderRadius.circular(9999.0);
       containerWidget = Material(
         elevation: style.elevation!,
         color: Colors.transparent,
-        borderRadius: style.borderRadius,
+        borderRadius: effectiveRadius,
         child: containerWidget,
       );
     }
